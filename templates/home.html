@@ -3,201 +3,524 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h2>Home Page</h2>
-<p>Welcome back, {{ username }}!</p>
-    <meta charset="UTF-8"/>
+
+<meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, user-scalable=no">
  <meta name="theme-color" content="#ee7711">
  <title>PERIODIC TABLE</title>
- <!--<script src="data.js"></script>-->
- <style type="text/css">
-html { width: 100%; font-family: sans-serif; background-color: #ffffff; }
-@media (max-width: 600px) { html { width: 600px; } }
-@media (max-width: 800px) { body { margin: 0; } }
-h1 { font-size: 24px; text-align: center; color: #444; margin-bottom: -10px; }
-h2 { font-size: 16px; text-align: center; color: #444; margin-bottom: 2px; }
-h2 span { cursor: pointer; border-style: outset; color: #444;
-          border-width: 2px; padding: 2px; font-weight: normal; }
-h2 span.on { border-style: inset; text-shadow: 1px 1px 0 #444; }
-#detour { font-size: 11px; line-height: 3; text-align: center; color: #333; }
-#footnote { font-size: 10px; text-align: center; color: #333; }
-#periodic { margin: 0 auto; border-spacing: 3px; }
-@media (min-width: 701px) and (max-width: 800px)
-  { #periodic { border-spacing: 2px; } }
-@media (max-width: 700px) { #periodic { border-spacing: 1px; } }
-#periodic tr td { background-color: #ffffff; width: 32px; height: 32px;
-                  cursor: pointer; border-style: outset; border-width: 3px; }
-@media (max-width: 700px) { #periodic tr td { border-width: 2px; } }
-#periodic tr td.empty { background-color: transparent; cursor: auto;
-                        border: none; text-align: left; }
-#periodic tr.spacer td { height: 20px; }
-#periodic tr td sup { font-size: 15px; display: block; text-align: center; }
-#periodic tr td { font-size: 30px; text-align: center; position: relative; }
-#periodic tr td.sel { border-style: inset; text-shadow: 1px 1px 1px #777; }
-#periodic tr td.sel sup::before { content: '\25CF'; color: #0f0; font-size: 8px;
-                                  position: absolute; top: -1px; left: 1px; }
-#desc { padding: 0 30px; color: #555; }
-#examples { margin: 0 auto; }
-#examples tr td { background-color: #fff; width: 167px; height: 167px;
-                  font-size: 48px; color: #aaa; text-align: center;
-                  background-size: cover; background-repeat: no-repeat;
-                  background-position: center center; }
-#examples tr td a { display: block; width: 100%; height: 100%;
-                    text-align: left; vertical-align: top;
-                    font-size: 16px; color: #888; text-decoration: none; }
-table.hide_optional tr.optional { display: none; }
- </style>
- <h1>Periodic Table&nbsp;elements</h1>
 
- <h1 style="color:white;">               </h1>
- <h1 style="color:white;">               </h1>
- <h1 style="color:white;">               </h1>
- <table id="periodic">
-  <tr id="p1">
-   <td id="H" title="Hydrogen" onClick="document.location.href='def.html';"><sup>1</sup>H</td>
-   <td class="empty" colspan="16"></td>
-   <td id="He" title="Helium" onClick="document.location.href='def.html';"><sup>2</sup>He</td>
-  </tr>
-  <tr id="p2">
-   <td id="Li" title="Lithium" onClick="document.location.href='def.html';"><sup>3</sup>Li</td>
-   <td id="Be" title="Beryllium" onClick="document.location.href='def.html';"><sup>4</sup>Be</td>
-   <td class="empty" id="desc" colspan="10" rowspan="2"></td>
-   <td id="B" title="Boron" onClick="document.location.href='def.html';"><sup>5</sup>B</td>
-   <td id="C" title="Carbon" onClick="document.location.href='def.html';"><sup>6</sup>C</td>
-   <td id="N" title="Nitrogen" onClick="document.location.href='def.html';"><sup>7</sup>N</td>
-   <td id="O" title="Oxygen" onClick="document.location.href='def.html';"><sup>8</sup>O</td>
-   <td id="F" title="Fluorine" onClick="document.location.href='def.html';"><sup>9</sup>F</td>
-   <td id="Ne" title="Neon" onClick="document.location.href='def.html';"><sup>10</sup>Ne</td>
-  </tr>
-  <tr id="p3">
-   <td id="Na" title="Sodium" onClick="document.location.href='def.html';"><sup>11</sup>Na</td>
-   <td id="Mg" title="Magnesium" onClick="document.location.href='def.html';"><sup>12</sup>Mg</td>
-   <td id="Al" title="Aluminium" onClick="document.location.href='def.html';"><sup>13</sup>Al</td>
-   <td id="Si" title="Silicon" onClick="document.location.href='def.html';"><sup>14</sup>Si</td>
-   <td id="P"  title="Phosphorus" onClick="document.location.href='def.html';"><sup>15</sup>P</td>
-   <td id="S"  title="Sulfur" onClick="document.location.href='def.html';"><sup>16</sup>S</td>
-   <td id="Cl" title="Chlorine" onClick="document.location.href='def.html';"><sup>17</sup>Cl</td>
-   <td id="Ar" title="Argon" onClick="document.location.href='def.html';"><sup>18</sup>Ar</td>
-  </tr>
-  <tr id="p4">
-   <td id="K"  title="Potassium" onClick="document.location.href='def.html';"><sup>19</sup>K</td>
-   <td id="Ca" title="Calcium" onClick="document.location.href='def.html';"><sup>20</sup>Ca</td>
-   <td id="Sc" title="Scandium" onClick="document.location.href='def.html';"><sup>21</sup>Sc</td>
-   <td id="Ti" title="Titanium" onClick="document.location.href='def.html';"><sup>22</sup>Ti</td>
-   <td id="V"  title="Vanadium" onClick="document.location.href='def.html';"><sup>23</sup>V</td>
-   <td id="Cr" title="Chromium" onClick="document.location.href='def.html';"><sup>24</sup>Cr</td>
-   <td id="Mn" title="Manganese" onClick="document.location.href='def.html';"><sup>25</sup>Mn</td>
-   <td id="Fe" title="Iron" onClick="document.location.href='def.html';"><sup>26</sup>Fe</td>
-   <td id="Co" title="Cobalt" onClick="document.location.href='def.html';"><sup>27</sup>Co</td>
-   <td id="Ni" title="Nickel" onClick="document.location.href='def.html';"><sup>28</sup>Ni</td>
-   <td id="Cu" title="Copper" onClick="document.location.href='def.html';"><sup>29</sup>Cu</td>
-   <td id="Zn" title="Zinc" onClick="document.location.href='def.html';"><sup>30</sup>Zn</td>
-   <td id="Ga" title="Gallium" onClick="document.location.href='def.html';"><sup>31</sup>Ga</td>
-   <td id="Ge" title="Germanium" onClick="document.location.href='def.html';"><sup>32</sup>Ge</td>
-   <td id="As" title="Arsenic" onClick="document.location.href='def.html';"><sup>33</sup>As</td>
-   <td id="Se" title="Selenium" onClick="document.location.href='def.html';"><sup>34</sup>Se</td>
-   <td id="Br" title="Bromine" onClick="document.location.href='def.html';"><sup>35</sup>Br</td>
-   <td id="Kr" title="Krypton" onClick="document.location.href='def.html';"><sup>36</sup>Kr</td>
-  </tr>
-  <tr id="p5">
-   <td id="Rb" title="Rubidium" onClick="document.location.href='def.html';"><sup>37</sup>Rb</td>
-   <td id="Sr" title="Strontium" onClick="document.location.href='def.html';"><sup>38</sup>Sr</td>
-   <td id="Y"  title="Yttrium" onClick="document.location.href='def.html';"><sup>39</sup>Y</td>
-   <td id="Zr" title="Zirconium" onClick="document.location.href='def.html';"><sup>40</sup>Zr</td>
-   <td id="Nb" title="Niobium" onClick="document.location.href='def.html';"><sup>41</sup>Nb</td>
-   <td id="Mo" title="Molybdenum" onClick="document.location.href='def.html';"><sup>42</sup>Mo</td>
-   <td id="Tc" title="Technetium" onClick="document.location.href='def.html';"><sup>43</sup>Tc</td>
-   <td id="Ru" title="Ruthenium" onClick="document.location.href='def.html';"><sup>44</sup>Ru</td>
-   <td id="Rh" title="Rhodium" onClick="document.location.href='def.html';"><sup>45</sup>Rh</td>
-   <td id="Pd" title="Palladium" onClick="document.location.href='def.html';"><sup>46</sup>Pd</td>
-   <td id="Ag" title="Silver" onClick="document.location.href='def.html';"><sup>47</sup>Ag</td>
-   <td id="Cd" title="Cadmium" onClick="document.location.href='def.html';"><sup>48</sup>Cd</td>
-   <td id="In" title="Indium" onClick="document.location.href='def.html';"><sup>49</sup>In</td>
-   <td id="Sn" title="Tin" onClick="document.location.href='def.html';"><sup>50</sup>Sn</td>
-   <td id="Sb" title="Antimony" onClick="document.location.href='def.html';"><sup>51</sup>Sb</td>
-   <td id="Te" title="Tellurium" onClick="document.location.href='def.html';"><sup>52</sup>Te</td>
-   <td id="I"  title="Iodine" onClick="document.location.href='def.html';"><sup>53</sup>I</td>
-   <td id="Xe" title="Xenon" onClick="document.location.href='def.html';"><sup>54</sup>Xe</td>
-  </tr>
-  <tr id="p6">
-   <td id="Cs" title="Caesium" onClick="document.location.href='def.html';"><sup>55</sup>Cs</td>
-   <td id="Ba" title="Barium" onClick="document.location.href='def.html';"><sup>56</sup>Ba</td>
-   <td class="empty"></td>
-   <td id="Hf" title="Hafnium" onClick="document.location.href='def.html';"><sup>72</sup>Hf</td>
-   <td id="Ta" title="Tantalum" onClick="document.location.href='def.html';"><sup>73</sup>Ta</td>
-   <td id="W"  title="Tungsten" onClick="document.location.href='def.html';"><sup>74</sup>W</td>
-   <td id="Re" title="Rhenium" onClick="document.location.href='def.html';"><sup>75</sup>Re</td>
-   <td id="Os" title="Osmium" onClick="document.location.href='def.html';"><sup>76</sup>Os</td>
-   <td id="Ir" title="Iridium" onClick="document.location.href='def.html';"><sup>77</sup>Ir</td>
-   <td id="Pt" title="Platinum" onClick="document.location.href='def.html';"><sup>78</sup>Pt</td>
-   <td id="Au" title="Gold" onClick="document.location.href='def.html';"><sup>79</sup>Au</td>
-   <td id="Hg" title="Mercury" onClick="document.location.href='def.html';"><sup>80</sup>Hg</td>
-   <td id="Tl" title="Thallium" onClick="document.location.href='def.html';"><sup>81</sup>Tl</td>
-   <td id="Pb" title="Lead" onClick="document.location.href='def.html';"><sup>82</sup>Pb</td>
-   <td id="Bi" title="Bismuth" onClick="document.location.href='def.html';"><sup>83</sup>Bi</td>
-   <td id="Po" title="Polonium" onClick="document.location.href='def.html';"><sup>84</sup>Po</td>
-   <td id="At" title="Astatine" onClick="document.location.href='def.html';"><sup>85</sup>At</td>
-   <td id="Rn" title="Radon" onClick="document.location.href='def.html';"><sup>86</sup>Rn</td>
-  </tr>
-  <tr id="p7">
-   <td id="Fr" title="Francium" onClick="document.location.href='def.html';"><sup>87</sup>Fr</td>
-   <td id="Ra" title="Radium" onClick="document.location.href='def.html';"><sup>88</sup>Ra</td>
-   <td class="empty"></td>
-   <td id="Rf" title="Rutherfordium" onClick="document.location.href='def.html';"><sup>104</sup>Rf</td>
-   <td id="Db" title="Dubnium" onClick="document.location.href='def.html';"><sup>105</sup>Db</td>
-   <td id="Sg" title="Seaborgium" onClick="document.location.href='def.html';"><sup>106</sup>Sg</td>
-   <td id="Bh" title="Bohrium" onClick="document.location.href='def.html';"><sup>107</sup>Bh</td>
-   <td id="Hs" title="Hassium" onClick="document.location.href='def.html';"><sup>108</sup>Hs</td>
-   <td id="Mt" title="Meitnerium" onClick="document.location.href='def.html';"><sup>109</sup>Mt</td>
-   <td id="Ds" title="Darmstadtium" onClick="document.location.href='def.html';"><sup>110</sup>Ds</td>
-   <td id="Rg" title="Roentgenium" onClick="document.location.href='def.html';"><sup>111</sup>Rg</td>
-   <td id="Cn" title="Copernicium" onClick="document.location.href='def.html';"><sup>112</sup>Cn</td>
-   <td id="Nh" title="Nihonium" onClick="document.location.href='def.html';"><sup>113</sup>Nh</td>
-   <td id="Fl" title="Flerovium" onClick="document.location.href='def.html';"><sup>114</sup>Fl</td>
-   <td id="Mc" title="Moscovium" onClick="document.location.href='def.html';"><sup>115</sup>Mc</td>
-   <td id="Lv" title="Livermorium" onClick="document.location.href='def.html';"><sup>116</sup>Lv</td>
-   <td id="Ts" title="Tennessine" onClick="document.location.href='def.html';"><sup>117</sup>Ts</td>
-   <td id="Og" title="Oganesson" onClick="document.location.href='def.html';"><sup>118</sup>Og</td>
-  </tr>
-  <tr class="spacer"><td class="empty" colspan=18></td></tr>
-  <tr>
-   <td class="empty" colspan="2"></td>
-   <td id="La" title="Lanthanum" onClick="document.location.href='def.html';"><sup>57</sup>La</td>
-   <td id="Ce" title="Cerium" onClick="document.location.href='def.html';"><sup>58</sup>Ce</td>
-   <td id="Pr" title="Praseodymium" onClick="document.location.href='def.html';"><sup>59</sup>Pr</td>
-   <td id="Nd" title="Neodymium" onClick="document.location.href='def.html';"><sup>60</sup>Nd</td>
-   <td id="Pm" title="Promethium" onClick="document.location.href='def.html';"><sup>61</sup>Pm</td>
-   <td id="Sm" title="Samarium" onClick="document.location.href='def.html';"><sup>62</sup>Sm</td>
-   <td id="Eu" title="Europium" onClick="document.location.href='def.html';"><sup>63</sup>Eu</td>
-   <td id="Gd" title="Gadolinium" onClick="document.location.href='def.html';"><sup>64</sup>Gd</td>
-   <td id="Tb" title="Terbium" onClick="document.location.href='def.html';"><sup>65</sup>Tb</td>
-   <td id="Dy" title="Dysprosium" onClick="document.location.href='def.html';"><sup>66</sup>Dy</td>
-   <td id="Ho" title="Holmium" onClick="document.location.href='def.html';"><sup>67</sup>Ho</td>
-   <td id="Er" title="Erbium" onClick="document.location.href='def.html';"><sup>68</sup>Er</td>
-   <td id="Tm" title="Thulium" onClick="document.location.href='def.html';"><sup>69</sup>Tm</td>
-   <td id="Yb" title="Ytterbium" onClick="document.location.href='def.html';"><sup>70</sup>Yb</td>
-   <td id="Lu" title="Lutetium" onClick="document.location.href='def.html';"><sup>71</sup>Lu</td>
-   <td class="empty"></td>
-  </tr>
-  <tr>
-   <td class="empty" colspan="2"></td>
-   <td id="Ac" title="Actinium" onClick="document.location.href='def.html';"><sup>89</sup>Ac</td>
-   <td id="Th" title="Thorium" onClick="document.location.href='def.html';"><sup>90</sup>Th</td>
-   <td id="Pa" title="Protactinium" onClick="document.location.href='def.html';"><sup>91</sup>Pa</td>
-   <td id="U"  title="Uranium" onClick="document.location.href='def.html';"><sup>92</sup>U</td>
-   <td id="Np" title="Neptunium" onClick="document.location.href='def.html';"><sup>93</sup>Np</td>
-   <td id="Pu" title="Plutonium" onClick="document.location.href='def.html';"><sup>94</sup>Pu</td>
-   <td id="Am" title="Americium" onClick="document.location.href='def.html';"><sup>95</sup>Am</td>
-   <td id="Cm" title="Curium" onClick="document.location.href='def.html';"><sup>96</sup>Cm</td>
-   <td id="Bk" title="Berkelium" onClick="document.location.href='def.html';"><sup>97</sup>Bk</td>
-   <td id="Cf" title="Californium" onClick="document.location.href='def.html';"><sup>98</sup>Cf</td>
-   <td id="Es" title="Einsteinium" onClick="document.location.href='def.html';"><sup>99</sup>Es</td>
-   <td id="Fm" title="Fermium" onClick="document.location.href='def.html';"><sup>100</sup>Fm</td>
-   <td id="Md" title="Mendelevium" onClick="document.location.href='def.html';"><sup>101</sup>Md</td>
-   <td id="No" title="Nobelium" onClick="document.location.href='def.html';"><sup>102</sup>No</td>
-   <td id="Lr" title="Lawrencium" onClick="document.location.href='def.html';"><sup>103</sup>Lr</td>
+		<style>
+			.button       { background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button2      {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button3      {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button4      {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button5      {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button6      {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button7      {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button8      {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button9      {background-color: #70DB70;
+					width: 100%;
+					height:100%;}
+			.button10     {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button11     {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button12     {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button13     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button14     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button15     {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button16     {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button17     {background-color: #70DB70;
+					width: 100%;
+					height:100%;}
+			.button18     {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button19     {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button20     {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button21     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button22     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button23     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button24     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button25     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button26     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button27     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button28     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button29     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button30     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button31     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button32     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button33     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button34     {background-color: #00CCFF;
+					width: 100%;
+					height:100%;}
+			.button35     {background-color: #70DB70;
+					width: 100%;
+					height:100%;}
+			.button36     {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button37     {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button38     {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button39     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button40     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button41     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button42     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button43     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button44     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button45     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button46     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button47     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button48     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button49     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button50     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button51     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button52     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button53     {background-color: #70DB70;
+					width: 100%;
+					height:100%;}
+			.button54     {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button55     {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button56     {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button57     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button58     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button59     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button60     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button61     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button62     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button63     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button64     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button65     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button66     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button67     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button68     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button69     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button70     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button71     {background-color: #00466B;
+					width: 100%;
+					height:100%;}
+			.button72     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button73     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button74     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button75     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button76     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button77     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button78     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button79     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button80     {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button81     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button82     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button83     {background-color: #FF704D;
+					width: 100%;
+					height:100%;}
+			.button84     {background-color: #FFB84D;
+					width: 100%;
+					height:100%;}
+			.button85     {background-color: #70DB70;
+					width: 100%;
+					height:100%;}
+			.button86     {background-color: #009999;
+					width: 100%;
+					height:100%;}
+			.button87     {background-color: #0066CC;
+					width: 100%;
+					height:100%;}
+			.button88     {background-color: #CC66CC;
+					width: 100%;
+					height:100%;}
+			.button89     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button90     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button91     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button92     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button93     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button94     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button95     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button96     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button97     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button98     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button99     {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button100    {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button101    {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button102    {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button103    {background-color: #742574;
+					width: 100%;
+					height:100%;}
+			.button104    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button105    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button106    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button107    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button108    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button109    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button110    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button111    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button112    {background-color: #FF4D4D;
+					width: 100%;
+					height:100%;}
+			.button113    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+			.button114    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+			.button115    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+			.button116    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+			.button117    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+			.button118    {background-color: #96A5A7;
+					width: 100%;
+					height:100%;}
+		</style>
+	</head>
+			<h1>Periodic Table&nbsp;elements</h1>
 
-   <td class="empty"></td>
-  </tr>
- </table>
+            <h1 style="color:white;">               </h1>
+            <h1 style="color:white;">               </h1>
+            <h1 style="color:white;">               </h1>
+            <table id="periodic">
+			<tr>
+				<td><button title = "Hydrogen" class = "button" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>1</sub><font face="Trebuchet MS" size="6">H</button></td>
+
+				<td class="empty" colspan="16" align = "center"><font color = #000000 size="6">PERIODIC TABLE</td>
+				<td><button title = "Helium" class = "button button2" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>2</sub><font face="Trebuchet MS" size="6">He</font></button></td>
+
+			</tr>
+			<tr>
+
+				<td><button title = "Lithium" class = "button button3" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>3</sub><font face="Trebuchet MS" size="6">Li</button></td>
+				<td><button title = "Beryllium" class = "button button4" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>4</sub><font face="Trebuchet MS" size="6">Be</button></td>
+				<td colspan = "10"></td>
+				<td><button title = "Boron" class = "button button5" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>5</sub><font face="Trebuchet MS" size="6">B</button></td>
+				<td><button title = "Carbon" class = "button button6" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>6</sub><font face="Trebuchet MS" size="6">C</button></td>
+				<td><button title = "Nitrogen" class = "button button7" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>7</sub><font face="Trebuchet MS" size="6">N</button></td>
+				<td><button title = "Oxygen" class = "button button8" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>8</sub><font face="Trebuchet MS" size="6">O</button></td>
+				<td><button title = "Fluorine" class = "button button9" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>9</sub><font face="Trebuchet MS" size="6">F</button></td>
+				<td><button title = "Neon" class = "button button10" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>10</sub><font face="Trebuchet MS" size="6">Ne</button></td>
+			</tr>
+			<tr>
+				<td><button title = "Sodium" class = "button button11" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>11</sub><font face="Trebuchet MS" size="6">Na</button></td>
+				<td><button title = "Magnesium" class = "button button12" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>12</sub><font face="Trebuchet MS" size="6">Mg</button></td>
+				<td colspan = "10"></td>
+				<td><button title = "Aluminium" class = "button button13" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>13</sub><font face="Trebuchet MS" size="6">Al</button></td>
+				<td><button title = "Silicon" class = "button button14" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>14</sub><font face="Trebuchet MS" size="6">Si</button></td>
+				<td><button title = "Phosphorus" class = "button button15" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>15</sub><font face="Trebuchet MS" size="6">P</button></td>
+				<td><button title = "Sulphur" class = "button button16" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>16</sub><font face="Trebuchet MS" size="6">S</button></td>
+				<td><button title = "Chlorine" class = "button button17" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>17</sub><font face="Trebuchet MS" size="6">Cl</button></td>
+				<td><button title = "Argon" class = "button button18" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>18</sub><font face="Trebuchet MS" size="6">Ar</button></td>
+			</tr>
+			<tr>
+				<td><button title = "Potassium" class = "button button19" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>19</sub><font face="Trebuchet MS" size="6">K</button></td>
+				<td><button title = "Calcium" class = "button button20" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>20</sub><font face="Trebuchet MS" size="6">Ca</button></td>
+				<td><button title = "Scandium" class = "button button21" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>21</sub><font face="Trebuchet MS" size="6">Sc</button></td>
+				<td><button title = "Titanium" class = "button button22" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>22</sub><font face="Trebuchet MS" size="6">Ti</button></td>
+				<td><button title = "Vanadium" class = "button button23" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>23</sub><font face="Trebuchet MS" size="6">V</button></td>
+				<td><button title = "Chromium" class = "button button24" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>24</sub><font face="Trebuchet MS" size="6">Cr</button></td>
+				<td><button title = "Manganese" class = "button button25" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>25</sub><font face="Trebuchet MS" size="6">Mn</button></td>
+				<td><button title = "Iron" class = "button button26" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>26</sub><font face="Trebuchet MS" size="6">Fe</button></td>
+				<td><button title = "Cobalt" class = "button button27" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>27</sub><font face="Trebuchet MS" size="6">Co</button></td>
+				<td><button title = "Nickel" class = "button button28" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>28</sub><font face="Trebuchet MS" size="6">Ni</button></td>
+				<td><button title = "Copper" class = "button button29" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>29</sub><font face="Trebuchet MS" size="6">Cu</button></td>
+				<td><button title = "Zinc" class = "button button30" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>30</sub><font face="Trebuchet MS" size="6">Zn</button></td>
+				<td><button title = "Gallium" class = "button button31" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>31</sub><font face="Trebuchet MS" size="6">Ga</button></td>
+				<td><button title = "Germanium" class = "button button32" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>32</sub><font face="Trebuchet MS" size="6">Ge</button></td>
+				<td><button title = "Arsenic" class = "button button33" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>33</sub><font face="Trebuchet MS" size="6">As</button></td>
+				<td><button title = "Selenium" class = "button button34" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>34</sub><font face="Trebuchet MS" size="6">Se</button></td>
+				<td><button title = "Bromine" class = "button button35" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>35</sub><font face="Trebuchet MS" size="6">Br</button></td>
+				<td><button title = "Krypton" class = "button button36" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>36</sub><font face="Trebuchet MS" size="6">Kr</button></td>
+			</tr>
+			<tr>
+				<td><button title = "Rubidium" class = "button button37" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>37</sub><font face="Trebuchet MS" size="6">Rb</button></td>
+				<td><button title = "Strontium" class = "button button38" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>38</sub><font face="Trebuchet MS" size="6">Sr</button></td>
+				<td><button title = "Yttrium" class = "button button39" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>39</sub><font face="Trebuchet MS" size="6">Y</button></td>
+				<td><button title = "Zirconium " class = "button button40" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>40</sub><font face="Trebuchet MS" size="6">Zr</button></td>
+				<td><button title = "Niobium" class = "button button41" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>41</sub><font face="Trebuchet MS" size="6">Nb</button></td>
+				<td><button title = "Molybdenum" class = "button button42" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>42</sub><font face="Trebuchet MS" size="6">Mo</button></td>
+				<td><button title = "Technetium" class = "button button43" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>43</sub><font face="Trebuchet MS" size="6">Tc</button></td>
+				<td><button title = "Ruthenium" class = "button button44" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>44</sub><font face="Trebuchet MS" size="6">Ru</button></td>
+				<td><button title = "Rhodium" class = "button button45" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>45</sub><font face="Trebuchet MS" size="6">Rh</button></td>
+				<td><button title = "Paladium" class = "button button46" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>46</sub><font face="Trebuchet MS" size="6">Pd</button></td>
+				<td><button title = "Silver" class = "button button47" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>47</sub><font face="Trebuchet MS" size="6">Ag</button></td>
+				<td><button title = "Cadmium" class = "button button48" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>48</sub><font face="Trebuchet MS" size="6">Cd</button></td>
+				<td><button title = "Indium" class = "button button49" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>49</sub><font face="Trebuchet MS" size="6">In</button></td>
+				<td><button title = "Tin" class = "button button50" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>50</sub><font face="Trebuchet MS" size="6">Sn</button></td>
+				<td><button title = "Antimony" class = "button button51" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>51</sub><font face="Trebuchet MS" size="6">Sb</button></td>
+				<td><button title = "Tellurium" class = "button button52" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>52</sub><font face="Trebuchet MS" size="6">Te</button></td>
+				<td><button title = "Iodine" class = "button button53" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>53</sub><font face="Trebuchet MS" size="6">I</button></td>
+				<td><button title = "Xenon" class = "button button54" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>54</sub><font face="Trebuchet MS" size="6">Xe</button></td>
+			</tr>
+			<tr>
+				<td><button title = "Caesium" class = "button button55" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>55</sub><font face="Trebuchet MS" size="6">Cs</button></td>
+				<td><button title = "Barium" class = "button button56" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>56</sub><font face="Trebuchet MS" size="6">Ba</button></td>
+				<td align="center"><font size="5" color="#FFFFFF">La</td>
+				<td><button title = "Hafnium" class = "button button72" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>72</sub><font face="Trebuchet MS" size="6">Hf</button></td>
+				<td><button title = "Tantalum" class = "button button73" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>73</sub><font face="Trebuchet MS" size="6">Ta</button></td>
+				<td><button title = "Tungsten" class = "button button74" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>74</sub><font face="Trebuchet MS" size="6">W</button></td>
+				<td><button title = "Rhenium" class = "button button75" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>75</sub><font face="Trebuchet MS" size="6">Re</button></td>
+				<td><button title = "Osmium" class = "button button76" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>76</sub><font face="Trebuchet MS" size="6">Os</button></td>
+				<td><button title = "Iridium" class = "button button77" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>77</sub><font face="Trebuchet MS" size="6">Ir</button></td>
+				<td><button title = "Platinum" class = "button button78" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>78</sub><font face="Trebuchet MS" size="6">Pt</button></td>
+				<td><button title = "Gold" class = "button button79" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>79</sub><font face="Trebuchet MS" size="6">Au</button></td>
+				<td><button title = "Mercury" class = "button button80" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>80</sub><font face="Trebuchet MS" size="6">Hg</button></td>
+				<td><button title = "Thallium" class = "button button81" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>81</sub><font face="Trebuchet MS" size="6">Tl</button></td>
+				<td><button title = "Lead" class = "button button82" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>82</sub><font face="Trebuchet MS" size="6">Pb</button></td>
+				<td><button title = "Bismuth" class = "button button83" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>83</sub><font face="Trebuchet MS" size="6">Bi</button></td>
+				<td><button title = "Polonium" class = "button button84" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>84</sub><font face="Trebuchet MS" size="6">Po</button></td>
+				<td><button title = "Astatine" class = "button button85" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>85</sub><font face="Trebuchet MS" size="6">At</button></td>
+				<td><button title = " Radon" class = "button button86" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>86</sub><font face="Trebuchet MS" size="6">Rn</button></td>
+			</tr>
+			<tr>
+				<td><button title = "Francium" class = "button button87" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>87</sub><font face="Trebuchet MS" size="6">Fr</button></td>
+				<td><button title = "Radium" class = "button button88" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>88</sub><font face="Trebuchet MS" size="6">Ra</button></td>
+				<td align="center"><font size="5" color="#FFFFFF">Ac</td>
+				<td><button title = "Rutherfordium" class = "button button104" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>104</sub><font face="Trebuchet MS" size="6">Rf</button></td>
+				<td><button title = "Dubnium" class = "button button105" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>105</sub><font face="Trebuchet MS" size="6">Db</button></td>
+				<td><button title = "Seaborgium" class = "button button106" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>106</sub><font face="Trebuchet MS" size="6">Sh</button></td>
+				<td><button title = "Bohrium" class = "button button107" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>107</sub><font face="Trebuchet MS" size="6">Bh</button></td>
+				<td><button title = "Hassium" class = "button button108" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>108</sub><font face="Trebuchet MS" size="6">Hs</button></td>
+				<td><button title = "Meitnerium" class = "button button109" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>109</sub><font face="Trebuchet MS" size="6">Mt</button></td>
+				<td><button title = "Darmstadtium" class = "button button110" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>110</sub><font face="Trebuchet MS" size="6">Ds</button></td>
+				<td><button title = "Roentgenium" class = "button button111" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>111</sub><font face="Trebuchet MS" size="6">Rg</button></td>
+				<td><button title = "Copernicium" class = "button button112" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>112</sub><font face="Trebuchet MS" size="6">Cn</button></td>
+				<td><button title = "Nihonium" class = "button button113" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>113</sub><font face="Trebuchet MS" size="6">Nh</button></td>
+				<td><button title = "Flerovium" class = "button button114" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>114</sub><font face="Trebuchet MS" size="6">Fl</button></td>
+				<td><button title = "Moscovium" class = "button button115" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>115</sub><font face="Trebuchet MS" size="6">Mc</button></td>
+				<td><button title = "Livermorium" class = "button button116" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>116</sub><font face="Trebuchet MS" size="6">Lv</button></td>
+				<td><button title = "Tennesine" class = "button button117" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>117</sub><font face="Trebuchet MS" size="6">Ts</button></td>
+				<td><button title = "Oganesson" class = "button button118" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>118</sub><font face="Trebuchet MS" size="6">Og</button></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td colspan = "2"><font size = "5" color = "#FFFFFF">Lanthanoids</td>
+				<td><button title = "Lanthanum" class = "button button57" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>57</sub><font face="Trebuchet MS" size="6">La</button></td>
+				<td><button title = "Cerium" class = "button button58" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>58</sub><font face="Trebuchet MS" size="6">Ce</button></td>
+				<td><button title = "Praseodymium" class = "button button59" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>59</sub><font face="Trebuchet MS" size="6">Pr</button></td>
+				<td><button title = "Neodymium" class = "button button60" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>60</sub><font face="Trebuchet MS" size="6">Nd</button></td>
+				<td><button title = "Promethium" class = "button button61" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>61</sub><font face="Trebuchet MS" size="6">Pm</button></td>
+				<td><button title = "Samarium" class = "button button62" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>62</sub><font face="Trebuchet MS" size="6">Sm</button></td>
+				<td><button title = "Europium" class = "button button63" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>63</sub><font face="Trebuchet MS" size="6">Eu</button></td>
+				<td><button title = "Gadolinium" class = "button button64" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>64</sub><font face="Trebuchet MS" size="6">Gd</button></td>
+				<td><button title = "Terbium" class = "button button65" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>65</sub><font face="Trebuchet MS" size="6">Tb</button></td>
+				<td><button title = "Dysprosium" class = "button button66" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>66</sub><font face="Trebuchet MS" size="6">Dy</button></td>
+				<td><button title = "Holmium" class = "button button67" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>67</sub><font face="Trebuchet MS" size="6">Ho</button></td>
+				<td><button title = "Erbium" class = "button button68" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>68</sub><font face="Trebuchet MS" size="6">Er</button></td>
+				<td><button title = "Thulium" class = "button button69" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>69</sub><font face="Trebuchet MS" size="6">Tm</button></td>
+				<td><button title = "Ytterbium" class = "button button70" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>70</sub><font face="Trebuchet MS" size="6">Yb</button></td>
+				<td><button title = "Lutetium" class = "button button71" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>71</sub><font face="Trebuchet MS" size="6">Lu</button></td>
+			</tr>
+			<tr>
+				<td colspan = "2"><font size = "5" color = "#FFFFFF">Actinoids</td>
+				<td><button title = "Actinium" class = "button button89" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>89</sub><font face="Trebuchet MS" size="6">Ac</button></td>
+				<td><button title = "Thorium" class = "button button90" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>90</sub><font face="Trebuchet MS" size="6">Th</button></td>
+				<td><button title = "Protactinium" class = "button button91" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>91</sub><font face="Trebuchet MS" size="6">Pa</button></td>
+				<td><button title = "Uranium" class = "button button92" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>92</sub><font face="Trebuchet MS" size="6">U</button></td>
+				<td><button title = "Neptunium" class = "button button93" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>93</sub><font face="Trebuchet MS" size="6">Np</button></td>
+				<td><button title = "Plutonium" class = "button button94" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>94</sub><font face="Trebuchet MS" size="6">Pu</button></td>
+				<td><button title = "Americiunm" class = "button button95" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>95</sub><font face="Trebuchet MS" size="6">Am</button></td>
+				<td><button title = "Curium" class = "button button96" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>96</sub><font face="Trebuchet MS" size="6">Cm</button></td>
+				<td><button title = "Berkelium" class = "button button97" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>97</sub><font face="Trebuchet MS" size="6">Bk</button></td>
+				<td><button title = "Californium" class = "button button98" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF ><sub>96</sub><font face="Trebuchet MS" size="6">Cf</button></td>
+				<td><button title = "Einsteinium" class = "button button99" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>99</sub><font face="Trebuchet MS" size="6">Es</button></td>
+				<td><button title = "Fermium" class = "button button100" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>100</sub><font face="Trebuchet MS" size="6">Fm</button></td>
+				<td><button title = "Mendelevium" class = "button button101" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>101</sub><font face="Trebuchet MS" size="6">Md</button></td>
+				<td><button title = "Nobelium" class = "button button102" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>102</sub><font face="Trebuchet MS" size="6">No</button></td>
+				<td><button title = "Lawrencium" class = "button button103" onclick = "document.location.href='def.html';"><b><font color = #FFFFFF><sub>103</sub><font face="Trebuchet MS" size="6">Lr</button></td>
+			</tr>
+		</table>
+	</body>
+
 {% endblock %}
