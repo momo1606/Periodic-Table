@@ -87,7 +87,6 @@ def register():
                 mysql.connection.commit()
                 msg = 'You have successfully registered!'
             except:
-                #mai momo hu
                 msg = 'Account already exists!'
     elif request.method == 'POST':
         # Form is empty... (no POST data)
