@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="562ede07-ddd9-4754-8a71-01803a0a22c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="562ede07-ddd9-4754-8a71-01803a0a22c1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="-1190">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
               </folding>
@@ -259,7 +255,7 @@
       <workItem from="1570472441345" duration="847000" />
       <workItem from="1570473310067" duration="454000" />
       <workItem from="1570473779400" duration="3792000" />
-      <workItem from="1570478052127" duration="8176000" />
+      <workItem from="1570478052127" duration="9805000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit.">
       <created>1570516043742</created>
@@ -286,7 +282,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25188000" />
+    <option name="totallyTimeSpent" value="26817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="-1190">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
           </folding>
