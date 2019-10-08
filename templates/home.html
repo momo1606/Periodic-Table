@@ -5,4 +5,199 @@
 {% block content %}
 <h2>Home Page</h2>
 <p>Welcome back, {{ username }}!</p>
+    <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, user-scalable=no">
+ <meta name="theme-color" content="#ee7711">
+ <title>PERIODIC TABLE</title>
+ <!--<script src="data.js"></script>-->
+ <style type="text/css">
+html { width: 100%; font-family: sans-serif; background-color: #ffffff; }
+@media (max-width: 600px) { html { width: 600px; } }
+@media (max-width: 800px) { body { margin: 0; } }
+h1 { font-size: 24px; text-align: center; color: #444; margin-bottom: -10px; }
+h2 { font-size: 16px; text-align: center; color: #444; margin-bottom: 2px; }
+h2 span { cursor: pointer; border-style: outset; color: #444;
+          border-width: 2px; padding: 2px; font-weight: normal; }
+h2 span.on { border-style: inset; text-shadow: 1px 1px 0 #444; }
+#detour { font-size: 11px; line-height: 3; text-align: center; color: #333; }
+#footnote { font-size: 10px; text-align: center; color: #333; }
+#periodic { margin: 0 auto; border-spacing: 3px; }
+@media (min-width: 701px) and (max-width: 800px)
+  { #periodic { border-spacing: 2px; } }
+@media (max-width: 700px) { #periodic { border-spacing: 1px; } }
+#periodic tr td { background-color: #ffffff; width: 32px; height: 32px;
+                  cursor: pointer; border-style: outset; border-width: 3px; }
+@media (max-width: 700px) { #periodic tr td { border-width: 2px; } }
+#periodic tr td.empty { background-color: transparent; cursor: auto;
+                        border: none; text-align: left; }
+#periodic tr.spacer td { height: 20px; }
+#periodic tr td sup { font-size: 15px; display: block; text-align: center; }
+#periodic tr td { font-size: 30px; text-align: center; position: relative; }
+#periodic tr td.sel { border-style: inset; text-shadow: 1px 1px 1px #777; }
+#periodic tr td.sel sup::before { content: '\25CF'; color: #0f0; font-size: 8px;
+                                  position: absolute; top: -1px; left: 1px; }
+#desc { padding: 0 30px; color: #555; }
+#examples { margin: 0 auto; }
+#examples tr td { background-color: #fff; width: 167px; height: 167px;
+                  font-size: 48px; color: #aaa; text-align: center;
+                  background-size: cover; background-repeat: no-repeat;
+                  background-position: center center; }
+#examples tr td a { display: block; width: 100%; height: 100%;
+                    text-align: left; vertical-align: top;
+                    font-size: 16px; color: #888; text-decoration: none; }
+table.hide_optional tr.optional { display: none; }
+ </style>
+ <h1>Periodic Table&nbsp;elements</h1>
+
+ <h1 style="color:white;">               </h1>
+ <h1 style="color:white;">               </h1>
+ <h1 style="color:white;">               </h1>
+ <table id="periodic">
+  <tr id="p1">
+   <td id="H" title="Hydrogen" onClick="document.location.href='def.html';"><sup>1</sup>H</td>
+   <td class="empty" colspan="16"></td>
+   <td id="He" title="Helium" onClick="document.location.href='def.html';"><sup>2</sup>He</td>
+  </tr>
+  <tr id="p2">
+   <td id="Li" title="Lithium" onClick="document.location.href='def.html';"><sup>3</sup>Li</td>
+   <td id="Be" title="Beryllium" onClick="document.location.href='def.html';"><sup>4</sup>Be</td>
+   <td class="empty" id="desc" colspan="10" rowspan="2"></td>
+   <td id="B" title="Boron" onClick="document.location.href='def.html';"><sup>5</sup>B</td>
+   <td id="C" title="Carbon" onClick="document.location.href='def.html';"><sup>6</sup>C</td>
+   <td id="N" title="Nitrogen" onClick="document.location.href='def.html';"><sup>7</sup>N</td>
+   <td id="O" title="Oxygen" onClick="document.location.href='def.html';"><sup>8</sup>O</td>
+   <td id="F" title="Fluorine" onClick="document.location.href='def.html';"><sup>9</sup>F</td>
+   <td id="Ne" title="Neon" onClick="document.location.href='def.html';"><sup>10</sup>Ne</td>
+  </tr>
+  <tr id="p3">
+   <td id="Na" title="Sodium" onClick="document.location.href='def.html';"><sup>11</sup>Na</td>
+   <td id="Mg" title="Magnesium" onClick="document.location.href='def.html';"><sup>12</sup>Mg</td>
+   <td id="Al" title="Aluminium" onClick="document.location.href='def.html';"><sup>13</sup>Al</td>
+   <td id="Si" title="Silicon" onClick="document.location.href='def.html';"><sup>14</sup>Si</td>
+   <td id="P"  title="Phosphorus" onClick="document.location.href='def.html';"><sup>15</sup>P</td>
+   <td id="S"  title="Sulfur" onClick="document.location.href='def.html';"><sup>16</sup>S</td>
+   <td id="Cl" title="Chlorine" onClick="document.location.href='def.html';"><sup>17</sup>Cl</td>
+   <td id="Ar" title="Argon" onClick="document.location.href='def.html';"><sup>18</sup>Ar</td>
+  </tr>
+  <tr id="p4">
+   <td id="K"  title="Potassium" onClick="document.location.href='def.html';"><sup>19</sup>K</td>
+   <td id="Ca" title="Calcium" onClick="document.location.href='def.html';"><sup>20</sup>Ca</td>
+   <td id="Sc" title="Scandium" onClick="document.location.href='def.html';"><sup>21</sup>Sc</td>
+   <td id="Ti" title="Titanium" onClick="document.location.href='def.html';"><sup>22</sup>Ti</td>
+   <td id="V"  title="Vanadium" onClick="document.location.href='def.html';"><sup>23</sup>V</td>
+   <td id="Cr" title="Chromium" onClick="document.location.href='def.html';"><sup>24</sup>Cr</td>
+   <td id="Mn" title="Manganese" onClick="document.location.href='def.html';"><sup>25</sup>Mn</td>
+   <td id="Fe" title="Iron" onClick="document.location.href='def.html';"><sup>26</sup>Fe</td>
+   <td id="Co" title="Cobalt" onClick="document.location.href='def.html';"><sup>27</sup>Co</td>
+   <td id="Ni" title="Nickel" onClick="document.location.href='def.html';"><sup>28</sup>Ni</td>
+   <td id="Cu" title="Copper" onClick="document.location.href='def.html';"><sup>29</sup>Cu</td>
+   <td id="Zn" title="Zinc" onClick="document.location.href='def.html';"><sup>30</sup>Zn</td>
+   <td id="Ga" title="Gallium" onClick="document.location.href='def.html';"><sup>31</sup>Ga</td>
+   <td id="Ge" title="Germanium" onClick="document.location.href='def.html';"><sup>32</sup>Ge</td>
+   <td id="As" title="Arsenic" onClick="document.location.href='def.html';"><sup>33</sup>As</td>
+   <td id="Se" title="Selenium" onClick="document.location.href='def.html';"><sup>34</sup>Se</td>
+   <td id="Br" title="Bromine" onClick="document.location.href='def.html';"><sup>35</sup>Br</td>
+   <td id="Kr" title="Krypton" onClick="document.location.href='def.html';"><sup>36</sup>Kr</td>
+  </tr>
+  <tr id="p5">
+   <td id="Rb" title="Rubidium" onClick="document.location.href='def.html';"><sup>37</sup>Rb</td>
+   <td id="Sr" title="Strontium" onClick="document.location.href='def.html';"><sup>38</sup>Sr</td>
+   <td id="Y"  title="Yttrium" onClick="document.location.href='def.html';"><sup>39</sup>Y</td>
+   <td id="Zr" title="Zirconium" onClick="document.location.href='def.html';"><sup>40</sup>Zr</td>
+   <td id="Nb" title="Niobium" onClick="document.location.href='def.html';"><sup>41</sup>Nb</td>
+   <td id="Mo" title="Molybdenum" onClick="document.location.href='def.html';"><sup>42</sup>Mo</td>
+   <td id="Tc" title="Technetium" onClick="document.location.href='def.html';"><sup>43</sup>Tc</td>
+   <td id="Ru" title="Ruthenium" onClick="document.location.href='def.html';"><sup>44</sup>Ru</td>
+   <td id="Rh" title="Rhodium" onClick="document.location.href='def.html';"><sup>45</sup>Rh</td>
+   <td id="Pd" title="Palladium" onClick="document.location.href='def.html';"><sup>46</sup>Pd</td>
+   <td id="Ag" title="Silver" onClick="document.location.href='def.html';"><sup>47</sup>Ag</td>
+   <td id="Cd" title="Cadmium" onClick="document.location.href='def.html';"><sup>48</sup>Cd</td>
+   <td id="In" title="Indium" onClick="document.location.href='def.html';"><sup>49</sup>In</td>
+   <td id="Sn" title="Tin" onClick="document.location.href='def.html';"><sup>50</sup>Sn</td>
+   <td id="Sb" title="Antimony" onClick="document.location.href='def.html';"><sup>51</sup>Sb</td>
+   <td id="Te" title="Tellurium" onClick="document.location.href='def.html';"><sup>52</sup>Te</td>
+   <td id="I"  title="Iodine" onClick="document.location.href='def.html';"><sup>53</sup>I</td>
+   <td id="Xe" title="Xenon" onClick="document.location.href='def.html';"><sup>54</sup>Xe</td>
+  </tr>
+  <tr id="p6">
+   <td id="Cs" title="Caesium" onClick="document.location.href='def.html';"><sup>55</sup>Cs</td>
+   <td id="Ba" title="Barium" onClick="document.location.href='def.html';"><sup>56</sup>Ba</td>
+   <td class="empty"></td>
+   <td id="Hf" title="Hafnium" onClick="document.location.href='def.html';"><sup>72</sup>Hf</td>
+   <td id="Ta" title="Tantalum" onClick="document.location.href='def.html';"><sup>73</sup>Ta</td>
+   <td id="W"  title="Tungsten" onClick="document.location.href='def.html';"><sup>74</sup>W</td>
+   <td id="Re" title="Rhenium" onClick="document.location.href='def.html';"><sup>75</sup>Re</td>
+   <td id="Os" title="Osmium" onClick="document.location.href='def.html';"><sup>76</sup>Os</td>
+   <td id="Ir" title="Iridium" onClick="document.location.href='def.html';"><sup>77</sup>Ir</td>
+   <td id="Pt" title="Platinum" onClick="document.location.href='def.html';"><sup>78</sup>Pt</td>
+   <td id="Au" title="Gold" onClick="document.location.href='def.html';"><sup>79</sup>Au</td>
+   <td id="Hg" title="Mercury" onClick="document.location.href='def.html';"><sup>80</sup>Hg</td>
+   <td id="Tl" title="Thallium" onClick="document.location.href='def.html';"><sup>81</sup>Tl</td>
+   <td id="Pb" title="Lead" onClick="document.location.href='def.html';"><sup>82</sup>Pb</td>
+   <td id="Bi" title="Bismuth" onClick="document.location.href='def.html';"><sup>83</sup>Bi</td>
+   <td id="Po" title="Polonium" onClick="document.location.href='def.html';"><sup>84</sup>Po</td>
+   <td id="At" title="Astatine" onClick="document.location.href='def.html';"><sup>85</sup>At</td>
+   <td id="Rn" title="Radon" onClick="document.location.href='def.html';"><sup>86</sup>Rn</td>
+  </tr>
+  <tr id="p7">
+   <td id="Fr" title="Francium" onClick="document.location.href='def.html';"><sup>87</sup>Fr</td>
+   <td id="Ra" title="Radium" onClick="document.location.href='def.html';"><sup>88</sup>Ra</td>
+   <td class="empty"></td>
+   <td id="Rf" title="Rutherfordium" onClick="document.location.href='def.html';"><sup>104</sup>Rf</td>
+   <td id="Db" title="Dubnium" onClick="document.location.href='def.html';"><sup>105</sup>Db</td>
+   <td id="Sg" title="Seaborgium" onClick="document.location.href='def.html';"><sup>106</sup>Sg</td>
+   <td id="Bh" title="Bohrium" onClick="document.location.href='def.html';"><sup>107</sup>Bh</td>
+   <td id="Hs" title="Hassium" onClick="document.location.href='def.html';"><sup>108</sup>Hs</td>
+   <td id="Mt" title="Meitnerium" onClick="document.location.href='def.html';"><sup>109</sup>Mt</td>
+   <td id="Ds" title="Darmstadtium" onClick="document.location.href='def.html';"><sup>110</sup>Ds</td>
+   <td id="Rg" title="Roentgenium" onClick="document.location.href='def.html';"><sup>111</sup>Rg</td>
+   <td id="Cn" title="Copernicium" onClick="document.location.href='def.html';"><sup>112</sup>Cn</td>
+   <td id="Nh" title="Nihonium" onClick="document.location.href='def.html';"><sup>113</sup>Nh</td>
+   <td id="Fl" title="Flerovium" onClick="document.location.href='def.html';"><sup>114</sup>Fl</td>
+   <td id="Mc" title="Moscovium" onClick="document.location.href='def.html';"><sup>115</sup>Mc</td>
+   <td id="Lv" title="Livermorium" onClick="document.location.href='def.html';"><sup>116</sup>Lv</td>
+   <td id="Ts" title="Tennessine" onClick="document.location.href='def.html';"><sup>117</sup>Ts</td>
+   <td id="Og" title="Oganesson" onClick="document.location.href='def.html';"><sup>118</sup>Og</td>
+  </tr>
+  <tr class="spacer"><td class="empty" colspan=18></td></tr>
+  <tr>
+   <td class="empty" colspan="2"></td>
+   <td id="La" title="Lanthanum" onClick="document.location.href='def.html';"><sup>57</sup>La</td>
+   <td id="Ce" title="Cerium" onClick="document.location.href='def.html';"><sup>58</sup>Ce</td>
+   <td id="Pr" title="Praseodymium" onClick="document.location.href='def.html';"><sup>59</sup>Pr</td>
+   <td id="Nd" title="Neodymium" onClick="document.location.href='def.html';"><sup>60</sup>Nd</td>
+   <td id="Pm" title="Promethium" onClick="document.location.href='def.html';"><sup>61</sup>Pm</td>
+   <td id="Sm" title="Samarium" onClick="document.location.href='def.html';"><sup>62</sup>Sm</td>
+   <td id="Eu" title="Europium" onClick="document.location.href='def.html';"><sup>63</sup>Eu</td>
+   <td id="Gd" title="Gadolinium" onClick="document.location.href='def.html';"><sup>64</sup>Gd</td>
+   <td id="Tb" title="Terbium" onClick="document.location.href='def.html';"><sup>65</sup>Tb</td>
+   <td id="Dy" title="Dysprosium" onClick="document.location.href='def.html';"><sup>66</sup>Dy</td>
+   <td id="Ho" title="Holmium" onClick="document.location.href='def.html';"><sup>67</sup>Ho</td>
+   <td id="Er" title="Erbium" onClick="document.location.href='def.html';"><sup>68</sup>Er</td>
+   <td id="Tm" title="Thulium" onClick="document.location.href='def.html';"><sup>69</sup>Tm</td>
+   <td id="Yb" title="Ytterbium" onClick="document.location.href='def.html';"><sup>70</sup>Yb</td>
+   <td id="Lu" title="Lutetium" onClick="document.location.href='def.html';"><sup>71</sup>Lu</td>
+   <td class="empty"></td>
+  </tr>
+  <tr>
+   <td class="empty" colspan="2"></td>
+   <td id="Ac" title="Actinium" onClick="document.location.href='def.html';"><sup>89</sup>Ac</td>
+   <td id="Th" title="Thorium" onClick="document.location.href='def.html';"><sup>90</sup>Th</td>
+   <td id="Pa" title="Protactinium" onClick="document.location.href='def.html';"><sup>91</sup>Pa</td>
+   <td id="U"  title="Uranium" onClick="document.location.href='def.html';"><sup>92</sup>U</td>
+   <td id="Np" title="Neptunium" onClick="document.location.href='def.html';"><sup>93</sup>Np</td>
+   <td id="Pu" title="Plutonium" onClick="document.location.href='def.html';"><sup>94</sup>Pu</td>
+   <td id="Am" title="Americium" onClick="document.location.href='def.html';"><sup>95</sup>Am</td>
+   <td id="Cm" title="Curium" onClick="document.location.href='def.html';"><sup>96</sup>Cm</td>
+   <td id="Bk" title="Berkelium" onClick="document.location.href='def.html';"><sup>97</sup>Bk</td>
+   <td id="Cf" title="Californium" onClick="document.location.href='def.html';"><sup>98</sup>Cf</td>
+   <td id="Es" title="Einsteinium" onClick="document.location.href='def.html';"><sup>99</sup>Es</td>
+   <td id="Fm" title="Fermium" onClick="document.location.href='def.html';"><sup>100</sup>Fm</td>
+   <td id="Md" title="Mendelevium" onClick="document.location.href='def.html';"><sup>101</sup>Md</td>
+   <td id="No" title="Nobelium" onClick="document.location.href='def.html';"><sup>102</sup>No</td>
+   <td id="Lr" title="Lawrencium" onClick="document.location.href='def.html';"><sup>103</sup>Lr</td>
+
+   <td class="empty"></td>
+  </tr>
+ </table>
 {% endblock %}
