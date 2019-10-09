@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<h2>Profile Page</h2>
+<div>
+    <p>The element details are given below:</p>
+    <table>
+        <tr>
+            <td>atomicNumber:</td>
+            <td>{{ data['atomicNumber'] }}</td>
+        </tr>
+        <tr>
+            <td>symbol:</td>
+            <td>{{ data['symbol'] }}</td>
+        </tr>
+        <tr>
+            <td>name:</td>
+            <td>{{ data['name'] }}</td>
+        </tr>
+        <tr>
+            <td>atomicMass:</td>
+            <td>{{ data['atomicMass'] }}</td>
+        </tr>
+        <tr>
+            <td>electronicConfiguration:</td>
+            <td>{{ data['electronicConfiguration'] }}</td>
+        </tr>
+        <tr>
+            <td>electronegativity:</td>
+            <td>{{ data['electronegativity'] }}</td>
+        </tr>
+        <tr>
+            <td>atomicRadius:</td>
+            <td>{{ data['atomicRadius'] }}</td>
+        </tr>
+        <tr>
+            <td>ionizationEnergy:</td>
+            <td>{{ data['ionizationEnergy'] }}</td>
+        </tr>
+        <tr>
+            <td>electronAffinity:</td>
+            <td>{{ data['electronAffinity'] }}</td>
+        </tr>
+        <tr>
+            <td>yearDiscovered:</td>
+            <td>{{ data['yearDiscovered'] }}</td>
+        </tr>
+        <tr>
+            <td>group number:</td>
+            <td>{{ data['g_no'] }}</td>
+        </tr>
+        <tr>
+            <td>period number:</td>
+            <td>{{ data['p_no'] }}</td>
+        </tr>
+        <tr>
+            <td>block number:</td>
+            <td>{{ data['b_name'] }}</td>
+        </tr>
+        <tr>
+            <td>group type:</td>
+            <td>{{ data['g_type'] }}</td>
+        </tr>
+        <td>isotope:</td>
+        {% for item in data2 %}
+<tr>
+    <td>{{item['isotope']}}</td>
+
+</tr>
+{% endfor %}
+    <td>isobar:</td>
+    {% for item in data3 %}
+<tr>
+    <td>{{item['isobar']}}</td>
+
+</tr>
+{% endfor %}
+
+    </table>
+</div>
+{% endblock %}
